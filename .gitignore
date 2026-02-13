@@ -1,0 +1,5 @@
+# Mac Subagent - don't commit these
+screenshots/
+data/
+node_modules/
+*.log

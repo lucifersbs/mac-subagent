@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * Mac Mini Subagent - Firefox Edition
- * Runs locally on Mac Mini, controls Firefox, automates social media
+ * Mac Mini Subagent - Chrome Edition
+ * Runs locally on Mac Mini, controls Chrome, automates social media
  */
 
-const { firefox } = require('playwright');
+const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
@@ -28,21 +28,21 @@ class MacSubagent {
   }
 
   async init() {
-    console.log('🚀 Starting Mac Mini Subagent (Firefox Edition)...');
-    console.log('Launching Firefox...');
+    console.log('🚀 Starting Mac Mini Subagent (Chrome Edition)...');
+    console.log('Launching Chrome...');
     
-    // Launch Firefox (uses Playwright's bundled Firefox)
-    this.browser = await firefox.launch({
+    // Launch Chrome (uses Playwright's bundled Chrome)
+    this.browser = await chromium.launch({
       headless: false // Visible so you can see what's happening
     });
 
     // Create persistent context for cookies/sessions
     this.context = await this.browser.newContext({
       viewport: { width: 1920, height: 1080 },
-      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0'
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; Chrome/120.0)  Chrome/120.0'
     });
 
-    console.log('✅ Firefox connected');
+    console.log('✅ Chrome connected');
     console.log('Subagent ready for commands');
     console.log('Watching commands.json for new tasks...\n');
     

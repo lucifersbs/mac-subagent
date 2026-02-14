@@ -1,0 +1,33 @@
+{
+  "commands": [
+    {
+      "id": "cmd-001",
+      "type": "x_login",
+      "username": "AlexChen1278639",
+      "password": "Blackdoctorstrange123!",
+      "executed": true,
+      "skipped": true,
+      "note": "X blocks automated login - login manually first",
+      "failed": false
+    },
+    {
+      "id": "cmd-002",
+      "type": "x_update_profile",
+      "updates": {
+        "name": "Alex Chen | Legal Tech Builder",
+        "bio": "Building legal tech & digital assets. Creator of Legal Data API. Helping lawyers & developers work smarter. Building in public. 🚀",
+        "location": "Remote",
+        "website": "https://legal-data-api-ubsk.onrender.com"
+      },
+      "executed": false,
+      "failed": false
+    },
+    {
+      "id": "cmd-003",
+      "type": "youtube_channel_info",
+      "executed": true,
+      "failed": false,
+      "result": { "success": true }
+    }
+  ]
+}

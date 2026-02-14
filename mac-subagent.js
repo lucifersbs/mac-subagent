@@ -31,10 +31,9 @@ class MacSubagent {
     console.log('🚀 Starting Mac Mini Subagent (Firefox Edition)...');
     console.log('Launching Firefox...');
     
-    // Launch Firefox
+    // Launch Firefox (uses Playwright's bundled Firefox)
     this.browser = await firefox.launch({
-      headless: false, // Visible so you can see what's happening
-      executablePath: '/Applications/Firefox.app/Contents/MacOS/firefox'
+      headless: false // Visible so you can see what's happening
     });
 
     // Create persistent context for cookies/sessions

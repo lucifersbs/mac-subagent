@@ -34,11 +34,7 @@ class MacSubagent {
     // Launch Firefox
     this.browser = await firefox.launch({
       headless: false, // Visible so you can see what's happening
-      executablePath: '/Applications/Firefox.app/Contents/MacOS/firefox',
-      args: [
-        '--width=1920',
-        '--height=1080'
-      ]
+      executablePath: '/Applications/Firefox.app/Contents/MacOS/firefox'
     });
 
     // Create persistent context for cookies/sessions
